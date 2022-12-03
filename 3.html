@@ -5,13 +5,32 @@
  <meta charset="utf-8">
 </head>
 <body>
-    <input type="button" value="night" onclick="
-    document.querySelector('body').style.backgroundColor='black';
-    document.querySelector('body').style.color='white';">
+    <input  id="night_day" type="button" value="night" onclick="
+    var target=document.querySelector('body');
+    if(this.value==='night'){
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        this.value='day';
 
-    <input type="button" value="day" onclick="
-    document.querySelector('body').style.backgroundColor='white';
-    document.querySelector('body').style.color='black';">
+        var alist=document.querySelectorAll('a');
+        var i=0;
+        while(i<alist.length){
+            alist[i].style.color='powderblue';
+            i=i+1;
+        }
+    } else{
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        this.value='night';
+        var alist=document.querySelectorAll('a');
+        var i=0;
+        while(i<alist.length){
+            alist[i].style.color='blue';
+            i=i+1;
+        }
+
+    }
+    ">
 <ol>
     <li>HTML</li>
     <li>CSS</li>
@@ -21,5 +40,18 @@
 <h1><a href="https://www.google.com/search?q=%EC%BD%94%EB%94%A9&rlz=1C1CHZN_koKR1033KR1033&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjuh4fC-Mv7AhXDdXAKHeLFBsIQ_AUoAXoECAIQAw&biw=958&bih=959&dpr=1" target="_blank" title="검색결과">HTML</a>이란 무엇인가?</h1>
 <p>안녕하세요 저는 지금 웹프로그램을 만들어보려고 하고 있습니다. </p>
 <img width="25%" src="다운로드.jpg">
+<input  id="night_day2" type="button" value="night" onclick="
+    var target=document.querySelector('body');  
+    if(this.value==='night'){
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        this.value='day';
+    } else{
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        this.value='night';
+
+    }
+    ">
 </body>
 </html>
